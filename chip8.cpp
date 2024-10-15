@@ -11,7 +11,6 @@ TChip8::TChip8()
     m_logger = TLogger::getInstance();
     m_cpu = new TCpu(this);
     m_emulatorRunning = true;
-    m_key_pressed = false;
     m_display = nullptr;
     m_keyboard = nullptr;
     m_sound = nullptr;
@@ -48,8 +47,6 @@ void TChip8::init(std::string rom_path)
     // Start keyboard state as all unpressed
     for (auto i = 0; i < NUM_KEYS; i++)
         m_keys[i] = 0;
-
-    m_key_pressed = false;
     
     // Init cpu registers
     m_cpu->init();

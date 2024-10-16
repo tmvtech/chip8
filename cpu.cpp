@@ -531,7 +531,7 @@ void TCpu::store_binary_code_decimal_representation()
 
     m_machine->m_ram[m_ireg] = m_reg[reg] / 100;
     m_machine->m_ram[m_ireg+1] = (m_reg[reg] / 10) % 10;
-    m_machine->m_ram[m_ireg+1] = (m_reg[reg] % 100) % 10;
+    m_machine->m_ram[m_ireg+2] = (m_reg[reg] % 100) % 10;
 }
 
 /*****************************

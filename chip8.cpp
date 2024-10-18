@@ -61,6 +61,9 @@ void TChip8::init(std::string rom_path)
 
     // Initialize sound lib
     m_sound->init();
+    
+    // Initialize keyboard lib
+    m_keyboard->init();
 }
 
 void TChip8::run()
